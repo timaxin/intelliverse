@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DietTracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1 data-key="app_title">DietTracker</h1>
+    <p data-key="app_desc" style="font-size: 12px; color: #666; margin-bottom: 20px;">
+        DietTracker helps users monitor their intake of calories, fats, proteins, carbohydrates, vitamins, and minerals.
+    </p>
+
+    <h3 data-key="foods_header">Foods:</h3>
+    <textarea id="products" data-key="placeholder_text" rows="5" placeholder="3 bananas and 1 apple, all medium size."></textarea>
+    <input type="file" id="fileInput" accept="image/*" style="display: none;">
+
+    <div class="images" id="buttonContainer">
+        <div class="ml-auto">
+            <span class="loader" style="display: none;"></span>
+            <button id="arrowId" aria-label="add form">
+                <img src="pics/arrow.png" alt="" width="24" height="24">
+            </button>
+        </div>
+    </div>
+
+    <h3 data-key="settings_header">Settings</h3>
+    <div id="category1" class="select-group">
+        <label for="category-select1" data-key="label_lang">Solution language</label>
+        <select id="category-select1"></select>
+    </div>
+
+    <div id="category-gender" class="select-group">
+        <label for="gender-select" data-key="label_gender">Gender</label>
+        <select id="gender-select"></select>
+    </div>
+
+    <div id="category3" class="select-group">
+        <label for="category-select3" data-key="label_age">Age</label>
+        <select id="category-select3"></select>
+    </div>
+
+    <div id="category5" class="select-group">
+        <label for="category-select5" data-key="label_height">Height</label>
+        <select id="category-select5"></select>
+    </div>
+
+    <div id="category6" class="select-group">
+        <label for="category-select6" data-key="label_weight">Weight</label>
+        <select id="category-select6"></select>
+    </div>
+
+    <div id="category-activity" class="select-group">
+        <label for="activity-select" data-key="label_activity">Physical Activity</label>
+        <select id="activity-select"></select>
+    </div>
+
+    <div class="images">
+        <button id="pencilId2" aria-label="correct">
+            <img src="pics/pencil.png" alt="" width="24" height="24">
+        </button>
+        <div class="ml-auto">
+            <span class="loader" style="display: none;"></span>
+            <button id="arrowId2" aria-label="add form">
+                <img src="pics/arrow.png" alt="" width="24" height="24">
+            </button>
+        </div>
+    </div>
+
+    <div id="result-box" style="display: none; margin-top: 20px; text-align: center; border-top: 1px solid #eee; padding-top: 10px;">
+        <h4 id="result-label" data-key="result_label" style="margin: 0; color: #333;">Result:</h4>
+        <div id="calories-val" style="font-size: 24px; font-weight: bold; color: #4A90E2;">0 kcal</div>
+        <div id="macros" style="font-size: 14px; color: #666; margin-top: 5px;"></div>
+        <div id="json"></div>
+    </div>
+</div>
+
+<script type="module" src="main.js"></script>
+</body>
+</html>

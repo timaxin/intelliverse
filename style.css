@@ -1,0 +1,150 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aliceblue;
+    margin: 0;
+    padding: 10px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 450px; /* Оптимально для телефонов и iPad */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+h1, h3 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    resize: none;
+    margin-bottom: 10px;
+}
+
+/*Buttons*/
+.images {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 0;
+    width: 100%;
+}
+
+.images button {
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, background 0.2s;
+    min-width: 50px;
+    min-height: 50px;
+}
+
+.images button img {
+    width: 28px;
+    height: 28px;
+}
+
+.images button:hover {
+    background: #e5e5e5;
+    transform: scale(1.1);
+}
+
+/* arrow to right corner */
+#arrowId, #arrowId2 {
+    margin-left: auto;
+    background-color: #e3f2fd;
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+/* selectors */
+[id^="category"], .select-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 12px 0;
+}
+
+[id^="category"] label {
+    position: absolute;
+    top: -9px;
+    left: 12px;
+    z-index: 10;
+    background-color: white;
+    padding: 0 5px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #555;
+    pointer-events: none;
+}
+
+[id^="category"] select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: 2px solid #e0e0e0;
+    font-size: 16px; /* 16px предотвращает зум на iPhone */
+    background-color: #f9f9f9;
+    outline: none;
+    margin: 0;
+}
+
+/* ЛОАДЕР (уменьшен для кнопок) */
+.loader {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid #ccc;
+    border-top-color: #FF3D00;
+    animation: rotation 1s linear infinite;
+    flex-shrink: 0;
+}
+
+@keyframes rotation {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Адаптивность для планшетов (iPad) */
+@media (min-width: 768px) {
+    .container {
+        max-width: 500px;
+        padding: 30px;
+    }
+}
+
+/* Адаптивность для очень маленьких телефонов */
+@media (max-width: 360px) {
+    .images { gap: 5px; }
+    .images button { padding: 8px; min-width: 44px; min-height: 44px; }
+}

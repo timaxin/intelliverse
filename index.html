@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IntelliVerse Home</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+
+
+<header class="top-bar">
+    <div class="lang-selector">
+        <span class="lang-icon">🌐</span>
+        <select id="home-lang-select">
+        </select>
+    </div>
+</header>
+
+<main class="home-container">
+    <h1 id="home-title" data-key="title">Welcome to IntelliVerse</h1>
+
+    <div class="app-grid">
+        <div id="diet-link" class="app-card active-card">
+            <div class="app-icon">🍎</div>
+            <h3 class="app-name" data-key="diet">DietTracker</h3>
+            <p class="app-desc" data-key="dietDesc">Calorie and nutrient counter</p>
+        </div>
+
+        <div class="app-card locked">
+            <div class="app-icon">⏳</div>
+            <h3 class="app-name" data-key="soon">Soon</h3>
+            <p class="app-desc" data-key="soonDesc">In development</p>
+        </div>
+
+        <div class="app-card locked">
+            <div class="app-icon">⏳</div>
+            <h3 class="app-name" data-key="soon">Soon</h3>
+            <p class="app-desc" data-key="soonDesc">In development</p>
+        </div>
+
+        <div class="app-card locked">
+            <div class="app-icon">⏳</div>
+            <h3 class="app-name" data-key="soon">Soon</h3>
+            <p class="app-desc" data-key="soonDesc">In development</p>
+        </div>
+    </div>
+</main>
+
+<script src="home.js"></script>
+</body>
+</html>
